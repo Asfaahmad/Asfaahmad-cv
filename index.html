@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV - Asfa Ahmad</title>
+
+    <!-- FONT POPPINS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/a2d9d6e23c.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #f3d9ff, #e8e7ff);
+            padding: 40px 0;
+            color: #3a2b4c;
+            transition: 0.3s;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 900px;
+            margin: auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.65);
+            border-radius: 25px;
+            backdrop-filter: blur(14px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            animation: fadeIn 1.2s ease;
+        }
+
+        /* HEADER */
+        .header {
+            text-align: center;
+        }
+
+        .header img {
+            width: 145px;
+            height: 145px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #ad7aff;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+            transition: 0.3s;
+        }
+
+        .header img:hover {
+            transform: scale(1.08);
+        }
+
+        .header h1 {
+            margin-top: 15px;
+            font-size: 32px;
+            font-weight: 700;
+            color: #5b3899;
+        }
+
+        .header p {
+            color: #7b62a6;
+        }
+
+        /* TITLES */
+        .section {
+            margin-top: 35px;
+            animation: fadeUp 1s ease forwards;
+        }
+
+        .section h2 {
+            border-left: 6px solid #ad7aff;
+            padding-left: 14px;
+            color: #7a47d1;
+            margin-bottom: 12px;
+        }
+
+        ul li {
+            margin: 6px 0;
+        }
+
+        /* SKILLS */
+        .skills span {
+            display: inline-block;
+            background: #ad7aff;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 12px;
+            font-size: 14px;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        .skills span:hover {
+            transform: translateY(-4px);
+            background: #9356f7;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* PROJECT CARDS */
+        .project-card {
+            background: rgba(255,255,255,0.52);
+            border-radius: 15px;
+            padding: 18px;
+            margin-top: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.75);
+        }
+
+        .project-title {
+            font-weight: 600;
+            color: #7a47d1;
+        }
+
+        /* BUTTONS */
+        .btn-darkmode, .btn-pdf {
+            position: fixed;
+            right: 20px;
+            background: #ad7aff;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 14px;
+            cursor: pointer;
+            color: white;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+
+        .btn-darkmode:hover, .btn-pdf:hover {
+            background: #9356f7;
+            transform: scale(1.05);
+        }
+
+        .btn-darkmode {
+            bottom: 20px;
+        }
+
+        .btn-pdf {
+            bottom: 70px;
+        }
+
+        /* DARK MODE */
+        .dark {
+            background: #1b1425;
+            color: #eae6f7;
+        }
+
+        .dark .container {
+            background: rgba(40, 33, 51, 0.75);
+        }
+
+        .dark h2 {
+            border-left-color: #cda3ff;
+            color: #cda3ff;
+        }
+
+        .dark .skills span {
+            background: #cda3ff;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1;}
+        }
+
+        @keyframes fadeUp {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1;}
+        }
+
+        /* RESPONSIVE */
+        @media(max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+
+            .header h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BUTTONS -->
+    <button class="btn-pdf" onclick="window.print()"><i class="fas fa-file-pdf"></i> Download PDF</button>
+    <button class="btn-darkmode" onclick="toggleDarkMode()"><i class="fas fa-moon"></i> Mode Gelap</button>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="header">
+            <img src="asfa.jpg" alt="Foto Profil">
+            <h1>Asfa Ahmad</h1>
+            <p><i class="fas fa-code"></i> Mahasiswa Informatika | UI/UX Enthusiast</p>
+        </div>
+
+        <!-- PROFIL -->
+        <div class="section">
+            <h2><i class="fas fa-user"></i> Profil Singkat</h2>
+            <p>Saya adalah mahasiswa Informatika di Universitas Muhammadiyah Malang, memiliki ketertarikan pada UI/UX, desain aplikasi, dan pengembangan web modern.</p>
+        </div>
+
+        <!-- DATA DIRI -->
+        <div class="section">
+            <h2><i class="fas fa-id-card"></i> Data Diri</h2>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> Kota Batu</li>
+                <li><i class="fas fa-phone"></i> 087841687273</li>
+                <li><i class="fas fa-envelope"></i> asfaahmad007@gmail.com</li>
+            </ul>
+        </div>
+
+        <!-- PENDIDIKAN -->
+        <div class="section">
+            <h2><i class="fas fa-graduation-cap"></i> Pendidikan</h2>
+            <ul>
+                <li>MAN Kota Batu — Jurusan Bahasa</li>
+                <li>Universitas Muhammadiyah Malang — Informatika (2023 - Sekarang)</li>
+            </ul>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="section">
+            <h2><i class="fas fa-cogs"></i> Keahlian</h2>
+            <div class="skills">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>UI/UX Design</span>
+                <span>Figma</span>
+            </div>
+        </div>
+
+        <!-- PROJECTS -->
+        <div class="section">
+            <h2><i class="fas fa-briefcase"></i> Project</h2>
+
+            <div class="project-card">
+                <div class="project-title">UI/UX Aplikasi Laporan Sampah</div>
+                <p>Project desain antarmuka aplikasi untuk pelaporan sampah, lengkap dengan alur pengguna dan prototipe menggunakan Figma.</p>
+                <p style="font-size: 14px; margin-top: 6px; color: #6b4ea0;">
+                    
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark");
+        }
+    </script>
+
+</body>
+</html>
